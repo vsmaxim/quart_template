@@ -1,0 +1,18 @@
+{
+    "listeners": {
+        "*:80": {
+            "pass": "applications/quart"
+        }
+    },
+
+    "applications": {
+        "quart": {
+            "type": "python 3.11",
+            "home": "/server/.venv/",
+            "path": "/server/",
+            "module": "yet_another_flask_template.app",
+            "callable": "asgi_app",
+            "threads": 4
+        }
+    }
+}

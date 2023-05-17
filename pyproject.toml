@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "yet-another-flask-template"
+version = "0.1.0"
+description = ""
+authors = ["maxim <vsmaxim8@gmail.com>"]
+readme = "README.md"
+packages = [{include = "yet_another_flask_template"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.3"
+alembic = "^1.10.3"
+gunicorn = "^20.1.0"
+quart = "^0.18.4"
+sqlalchemy = {version = "^2.0.10", extras = ["asyncio"]}
+returns = "^0.20.0"
+msgspec = "^0.14.2"
+asyncpg = "^0.27.0"
+greenlet = "^2.0.2"
+psycopg2-binary = "^2.9.6"
+bcrypt = "^4.0.1"
+toolz = "^0.12.0"
+pyjwt = "^2.6.0"
+quart-cors = "^0.6.0"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.2.0"
+
+[tool.pyright]
+typeCheckingMode = "off"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
